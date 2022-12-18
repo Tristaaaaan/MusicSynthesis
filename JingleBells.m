@@ -4,7 +4,8 @@
 #2022-12-18
 
 clc;
-clear;
+clf;
+clear all;
 close all;
 
 fs = 44100;
@@ -60,13 +61,12 @@ scoreJ=[B4Q,A4Q,A4Q,B4Q,A4Q2,D5Q2];
 scoreK=[D5Q,D5Q,C5Q,A4Q,G4H];
 
 #Lines
-lineA=[scoreA,scoreB,scoreC,scoreD,scoreA];
-lineB=[scoreB,scoreE,scoreF,scoreG,scoreH];
-lineC=[scoreI,scoreJ,scoreG,scoreH,scoreI];
-lineD=[scoreK,scoreA,scoreB,scoreC,scoreD];
+lineA=[scoreA,scoreB,scoreC,scoreD,scoreA,scoreB,scoreE,scoreF];
+lineB=[scoreG,scoreH,scoreI,scoreJ,scoreG,scoreH,scoreI,scoreK];
+lineC=[scoreG,scoreH,scoreI,scoreJ,scoreG,scoreH,scoreI,scoreK,scoreI,scoreK];
 
 #Full Song
-fullsong=[lineA,lineB,lineC,lineD,lineA,lineB,lineC,lineD,lineA,lineB,lineC,lineD];
+fullsong=[lineA,lineB,lineA,lineC];
 
 #Run
 soundsc(fullsong,fs);
